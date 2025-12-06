@@ -1,0 +1,43 @@
+
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    // Fully qualified name of your App class — this is used for gradle run
+    mainClass = 'com.example.bgchanger.App'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.guava
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// --- ADD THIS BLOCK BELOW ---
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version,
+            'Main-Class': application.mainClass.get()
+        )
+    }
+}
+
+// Optional: Create a runnable "fat jar" if you use external libraries
+// You may want to use the Shadow plugin for that.

@@ -1,0 +1,264 @@
+###v0.5.0b###
+
+
+###Special###
+secretroom.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+flashback_shieldbreaker.png = colorGrade = flashback_shieldbreaker, effect = none, music = warrens, loading = warrens, torch = default, progression = 17
+starfield_(custom).png = colorGrade = starfield, effect = none, music = cove, loading = cove, torch = default, progression = 26
+prisoner.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = default, progression = 36
+
+
+###Ruins###
+crypts.entrance_room_wall.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 0
+crypts.room_wall.arch.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.banneredhallway.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.barrels.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.EChallway.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.ECjail.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.ECoverlook.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.ECpillar.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.ECskullpiles.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.nighthallway.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.torture.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.room_wall.wine.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 1
+crypts.final_room_wall.plot_kill_necromancer_3.png = colorGrade = crypts, effect = none, music = ruins, loading = necromancer, torch = generic, progression = 2
+
+crypts.room_wall.entrance.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 3
+crypts.room_wall.altar.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.catacomb.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.chruchs.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.cultistaltar.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.drain.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.empty.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.jailbreak.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.library.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.sealedgate.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.segways.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 4
+crypts.room_wall.ECdoors.png = colorGrade = crypts, effect = none, music = ruins, loading = crypts, torch = generic, progression = 5
+crypts.final_room_wall.plot_kill_prophet_3.png = colorGrade = crypts, effect = none, music = ruins, loading = prophet, torch = generic, progression = 6
+
+
+###Weald###
+weald.entrance_room_wall.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 7
+weald.room_wall.fallen.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.shroomland.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.crowtree.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.poisonriver.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.crypt.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.cellar.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.village.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.clearing.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.corpsetrees.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.jack.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.cemetary.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.gate.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 8
+weald.room_wall.bob.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 9
+weald.room_wall.corruptedcabin.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 10
+weald.final_room_wall.plot_kill_hag_3.png = colorGrade = weald, effect = none, music = weald, loading = hag, torch = generic, progression = 11
+
+weald.room_wall.handtree.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 12
+weald.room_wall.abandonedpark.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 13
+weald.room_wall.couplegrave.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 14
+weald.room_wall.crownest.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 14
+weald.room_wall.moonlit.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 14
+weald.room_wall.nighttree.png = colorGrade = weald, effect = none, music = weald, loading = weald, torch = generic, progression = 14
+weald.final_room_wall.plot_kill_brigand_cannon_3.png = colorGrade = weald, effect = none, music = weald, loading = brigad_cannon, torch = generic, progression = 15
+
+
+###Warrens###
+warrens.entrance_room_wall.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 16
+warrens.room_wall.brickton.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.duct.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.ghetto.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.grate.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.pathways.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.shrine.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.skin.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.sluice.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.swine_invasion.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+warrens.room_wall.bnb_skells.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 17
+
+warrens.room_wall.meatlocker.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 18
+warrens.room_wall.fleshseeps.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 19
+warrens.final_room_wall.plot_kill_formless_flesh_3.png = colorGrade = warrens, effect = none, music = warrens, loading = formless_flesh, torch = generic, progression = 20
+
+warrens.room_wall.contaminatedmeat.png.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 21
+warrens.room_wall.EChallway.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 22
+warrens.room_wall.effigy.png = colorGrade = warrens, effect = none, music = warrens, loading = warrens, torch = generic, progression = 23
+warrens.final_room_wall.plot_kill_swine_prince_3.png = colorGrade = warrens, effect = none, music = warrens, loading = swine_prince, torch = generic, progression = 24
+
+
+###Cove###
+cove.entrance_room_wall.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 25
+cove.room_wall.ammonite.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.basalt.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.caveshrine.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.city.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.clams.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.grotto.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.grotto2 WIP.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.handtree.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.lakecavern.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.limpets.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.oldshrine.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.shipwreck.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.stormysea.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.torus.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.turtles.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+cove.room_wall.whale.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 26
+
+cove.room_wall.coral.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 27
+cove.room_wall.ECship.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 28
+cove.final_room_wall.plot_kill_drowned_crew_3.png = colorGrade = cove, effect = none, music = cove, loading = drowned_crew, torch = generic, progression = 29
+
+cove.room_wall.temple.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 30
+cove.room_wall.oldstatue.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 31
+cove.room_wall.wallcrack.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 32
+cove.room_wall.basrelief.png = colorGrade = cove, effect = none, music = cove, loading = cove, torch = generic, progression = 33
+cove.final_room_wall.plot_kill_siren_3.png = colorGrade = cove, effect = none, music = cove, loading = siren, torch = generic, progression = 34
+
+
+###Courtyard###
+courtyard.entrance_room_wall.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 35
+courtyard.room_wall.arch.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.arch1.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.garden1.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.garden2.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.hedge01.RMHDG.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.hedge1.RMHDG.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.hedge2.RMHDG.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+courtyard.room_wall.hedge3.RMHDG.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 36
+
+courtyard.room_wall.swamp04.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 37
+courtyard.room_wall.swamp1.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 37
+courtyard.room_wall.swamp2.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 37
+courtyard.room_wall.swamp3.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 37
+courtyard.room_wall.swamp5.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 38
+courtyard.room_wall.swamp6.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 39
+courtyard.room_wall.swamp03.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 40
+crocodillian.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 41
+courtyard.room_wall.swamp01.RMSW.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 42
+gardenguardian.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard_baron, torch = blood, progression = 43
+courtyard.room_wall.baron.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard_baron, torch = blood, progression = 44
+baron.png = colorGrade = courtyard, effect = none, music = courtyard_room_boss, loading = courtyard_baron, torch = blood, progression = 45
+
+courtyard.room_wall.ruins02.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 46
+courtyard.room_wall.statue.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 47
+courtyard.room_wall.ruins01.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 48
+courtyard.room_wall.ruins3.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard, torch = blood, progression = 49
+courtyard.boss.room_wall.viscount.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard_viscount, torch = blood, progression = 50
+viscount.png = colorGrade = courtyard, effect = none, music = courtyard_room_boss, loading = courtyard_viscount, torch = blood, progression = 51
+
+courtyard.boss.room_wall.countess.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard_countess, torch = blood, progression = 52
+courtyard.room_wall.clearing.RMTRC.png = colorGrade = courtyard, effect = none, music = courtyard_room, loading = courtyard_countess, torch = blood, progression = 53
+countess.png = colorGrade = courtyard, effect = none, music = courtyard_room_boss, loading = courtyard_countess, torch = blood, progression = 54
+
+###Farmstead###
+farm.room_wall.windmill_0.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_1, torch = comet, progression = 55
+farm.room_wall.windmill_1.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_1, torch = comet, progression = 56
+farm.room_wall.windmill_2.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_1, torch = comet, progression = 57
+farm.room_wall.windmill_3.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_1, torch = comet, progression = 58
+farm.room_wall.windmill_4.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_1, torch = comet, progression = 59
+farm.room_wall.windmill.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_2, torch = comet, progression = 60
+farm.room_wall.windmill_5.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_2, torch = comet, progression = 61
+farm.room_wall.windmill_6.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_2, torch = comet, progression = 62
+farm.room_wall.windmill_7.png = colorGrade = default, effect = none, music = farmstead, loading = farmstead_2, torch = comet, progression = 63
+
+
+###Town###
+town.room_wall.start.png = colorGrade = default, effect = none, music = town, loading = town, torch = generic, progression = 64
+town.room_wall.altar.png = colorGrade = default, effect = none, music = town, loading = town, torch = generic, progression = 65
+town.room_wall.square.png = colorGrade = default, effect = none, music = town, loading = town, torch = generic, progression = 66
+town.final_room_wall.plot_town_invasion_0.png = colorGrade = default, effect = none, music = town, loading = town, torch = generic, progression = 67
+
+
+###Darkest-Dungeon###
+darkestdungeon.entrance_room_wall.plot_darkest_dungeon_1.png = colorGrade = default, effect = none, music = default, loading = darkest_1, torch = generic, progression = 68
+darkestdungeon.room_wall.random02.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random03.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random06.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random07.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random09.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random01.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 69
+darkestdungeon.room_wall.random05.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 70
+darkestdungeon.room_wall.random04.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 71
+darkestdungeon.room_wall.ancestorroom.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 72
+darkestdungeon.room_wall.random10.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 73
+darkestdungeon.room_wall.random08.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 74
+darkestdungeon.corridor_wall_(custom).png = colorGrade = darkest_quest_1, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 75
+darkestdungeon.final_room_wall.plot_darkest_dungeon_1.png = colorGrade = darkest_quest_1, effect = none, music = darkest_room_boss, loading = darkest_1, torch = generic, progression = 76
+
+darkestdungeon.room_wall.q2random01.png = colorGrade = darkest_quest_2, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 77
+darkestdungeon.room_wall.q2random02.png = colorGrade = darkest_quest_2, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 77
+darkestdungeon.room_wall.q2random03.png = colorGrade = darkest_quest_2, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 77
+darkestdungeon.corridor_wallq2_(custom).png = colorGrade = darkest_quest_2, effect = none, music = darkest_room, loading = darkest_1, torch = generic, progression = 78
+darkestdungeon.final_room_wall.plot_darkest_dungeon_2.png = colorGrade = darkest_quest_2, effect = none, music = darkest_room_boss, loading = darkest_1, torch = generic, progression = 79
+
+darkestdungeon.room_wall.q3random01.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 80
+darkestdungeon.room_wall.q3random02.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 80
+darkestdungeon.room_wall.q3random03.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 80
+darkestdungeon.room_wall.q3random04.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 80
+darkestdungeon.room_wall.q3random05.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 80
+darkestdungeon.corridor_wallq3_(custom).png = colorGrade = darkest_quest_3, effect = none, music = darkest_room, loading = darkest_3, torch = generic, progression = 81
+darkestdungeon.final_room_wall.plot_darkest_dungeon_3.png = colorGrade = darkest_quest_3, effect = none, music = darkest_room_boss, loading = darkest_3, torch = generic, progression = 82
+
+darkestdungeon.entrance_room_wall.plot_darkest_dungeon_4.png = colorGrade = space_corridor, effect = none, music = default, loading = darkest_4, torch = generic, progression = 83
+space_corridor_(custom).png = colorGrade = space_corridor, effect = none, music = void, loading = darkest_4, torch = default, progression = 84
+heartroom_(custom).png = colorGrade = heartroom, effect = none, music = darkest_room_boss, loading = darkest_4, torch = default, progression = 85
+
+######Black-Reliquary######
+
+###Special###
+
+###Catacombs###
+
+flameseeker.entrance_room_wall.plot_otekh_invasion_0.png = colorGrade = flameseeker, effect = none, music = flameseeker_room_miniboss_otekh, loading = flameseeker_otekh, torch = generic, progression = 86
+
+catacombs.entrance_room_wall.png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 87
+catacombs.room_wall.opening.png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 88
+catacombs.room_wall.light.png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 89
+catacombs.final_room_wall.plot_kill_janissary_3.png = colorGrade = catacombs, effect = none, music = catacombs_room_boss_janissary, loading = janissary, torch = generic, progression = 90
+
+catacombs.room_wall.pazuzu.png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 91
+catacombs.room_wall.evil.png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 92
+catacombs_corridor_(custom).png = colorGrade = catacombs, effect = none, music = catacombs_room, loading = catacombs, torch = generic, progression = 93
+catacombs.final_room_wall.plot_kill_enchantress_5.png = colorGrade = catacombs, effect = none, music = catacombs_room_boss_enchantress, loading = enchantress, torch = generic, progression = 94
+
+
+###Caverns###
+caverns.entrance_room_wall.png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 95
+caverns.room_wall.altar.png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 96
+caverns.room_wall.bloodpit.png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 97
+caverns.room_wall.megabite.png = colorGrade = caverns, effect = none, music = caverns_room_boss_gastrosaur, loading = gastrosaur, torch = generic, progression = 98
+
+caverns.room_wall.spikes.png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 99
+caverns_corridor_(custom).png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 100
+moon.png = colorGrade = moon, effect = none, music = general_room_miniboss_yngolian, loading = caverns, torch = default, progression = 101
+caverns.room_wall.ramp.png = colorGrade = caverns, effect = none, music = caverns_room, loading = caverns, torch = generic, progression = 102
+caverns.entrance_room_wall.plot_kill_ygreater_wurm_5.png = colorGrade = caverns, effect = none, music = caverns_room_boss_greater-sandwurm, loading = greater_sandwurm, torch = default, progression = 103
+
+
+###Treasury###
+treasury.entrance_room_wall.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 104
+treasury.room_wall.arches.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 105
+treasury.room_wall.clearing.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 106
+treasury.final_room_wall.plot_kill_zalraune_3.png = colorGrade = treasury, effect = none, music = treasury_room_boss_alraune, loading = alraune, torch = generic, progression = 107
+
+treasury.room_wall.gold.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 108
+treasury.room_wall.golem_red.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 109
+treasury.room_wall.vines.png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 110
+treasury_corridor_(custom).png = colorGrade = treasury, effect = none, music = treasury_room, loading = treasury, torch = generic, progression = 111
+treasury.final_room_wall.plot_kill_zcact_wall_5.png = colorGrade = treasury, effect = none, music = treasury_room_boss_nucleic-core, loading = nucleic_core, torch = generic, progression = 112
+
+
+###Exposed-Interior###
+exposed_interior.entrance_room_wall.png = colorGrade = exposed_interior_day, effect = none, music = exposed-interior_room_day, loading = exposed_interior, torch = br-sun, progression = 113
+exposed_interior.room_wall.arch.png = colorGrade = exposed_interior_day, effect = none, music = exposed-interior_room_day, loading = exposed_interior, torch = br-sun, progression = 114
+exposed-interior_corridor_(custom).png = colorGrade = exposed_interior_day, effect = none, music = exposed-interior_room_miniboss_sand-charmer, loading = exposed_interior, torch = br-sun, progression = 115
+exposed_interior.final_room_wall.plot_kill_warhawk_3.png = colorGrade = exposed_interior_day, effect = none, music = exposed-interior_room_boss_warhawk, loading = warhawk, torch = br-sun, progression = 116
+
+exposed_interior.room_wall.gate.png = colorGrade = exposed_interior_night, effect = none, music = exposed-interior_room_night, loading = exposed_interior, torch = br-moon, progression = 117
+exposed_interior.room_wall.city.png = colorGrade = exposed_interior_night, effect = none, music = exposed-interior_room_night, loading = exposed_interior, torch = br-moon, progression = 118
+exposed_interior.final_room_wall.plot_kill_steelpath_5.png = colorGrade = exposed_interior_night, effect = none, music = exposed-interior_room_boss_steelpath-mathron, loading = steelpath, torch = br-moon, progression = 119
+exposed_interior.entrance_room_wall.plot_ghoul_retention_0.png = colorGrade = exposed_interior_night, effect = none, music = general_room_miniboss_ghoul-mother, loading = ghoul_mother, torch = br-moon, progression = 120
+exposed_interior.room_wall.red.png = colorGrade = exposed_interior_eclipse, effect = none, music = exposed-interior_room_miniboss_the-flayed, loading = eclipse, torch = br-eclipse, progression = 121
