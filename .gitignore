@@ -1,0 +1,38 @@
+# Gradle caches
+.gradle/
+build/
+**/build/
+
+# Wrapper files to keep
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.properties
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+*.nb-gradle/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Git internal
+.git/
