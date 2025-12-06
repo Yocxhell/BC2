@@ -8,7 +8,7 @@ I originally made this to keep myself from forgetting java (so same reason as my
 
 I will upload music-less releases on my github (due to upload size limit) while my drive will have thelatest bgchanger release *with* music
 
-My drive also contains custom backgrounds outside of the ones used for progression mode.
+My drive also contains custom backgrounds outside of the ones used for progression mode (and other unrelated stuff).
 
 Its also possible to configure yourself which colorgrade/loading screen/torch/music to use to a certain background, check my guide to see which keyword to use in which section.
 
