@@ -6,7 +6,7 @@ It allows players to use modified backgrounds alongside colorgrades,,custom them
 
 I originally made this to keep myself from forgetting java (so same reason as my first project) but i eventually wanted to share my progress here in the end.
 
-I will upload music-less releases on my github (due to upload size limit) while my drive will have thelatest bgchanger release *with* music
+I will upload music-less releases on my github (due to upload size limit) while my drive will have the latest bgchanger release *with* music
 
 My drive also contains custom backgrounds outside of the ones used for progression mode (and other unrelated stuff).
 
