@@ -149,27 +149,27 @@ public class ImageProcessor {
         try {
             if (!Files.exists(outputDir)) {
                 Files.createDirectories(outputDir);
-                System.out.println("✔ Output directory created at: " + outputDir.toAbsolutePath());
+                System.out.println("!| Output directory created at: " + outputDir.toAbsolutePath());
             }
 
             String filename = getColorGradeFilename(colorGrade);
             if (filename == null) {
-                System.err.println("⚠️ Color grade not found for: " + colorGrade);
+                System.err.println("!|️ Color grade not found for: " + colorGrade);
                 return;
             }
 
             Path colorGradePath = Paths.get("color grades", filename);
             if (!Files.exists(colorGradePath)) {
-                System.err.println("⚠️ Color grade image not found at: " + colorGradePath.toAbsolutePath());
+                System.err.println("!|️ Color grade image not found at: " + colorGradePath.toAbsolutePath());
                 return;
             }
 
             Path dest = outputDir.resolve("colour_grade_4.png");
             Files.copy(colorGradePath, dest, StandardCopyOption.REPLACE_EXISTING);
-            System.out.println("\n✔ Color grade applied: " + dest.toAbsolutePath());
+            App.debugPrint("\nDEBUG| Color grade applied: " + dest.toAbsolutePath());
 
         } catch (IOException e) {
-            System.err.println("⚠️ Error applying color grade: " + e.getMessage());
+            System.err.println("X|️ Error applying color grade: " + e.getMessage());
         }
     }
 
@@ -182,7 +182,7 @@ public class ImageProcessor {
         Path source = LOADING_SCREENS_DIR.resolve(filename);
 
         if (!Files.exists(source)) {
-            System.err.println("⚠️ Loading screen file not found: " + source.toAbsolutePath());
+            System.err.println("!|️ Loading screen file not found: " + source.toAbsolutePath());
             return;
         }
 
@@ -194,7 +194,7 @@ public class ImageProcessor {
 
         Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
 
-        System.out.println("✔ Loading screen applied: " + dest.toAbsolutePath());
+        App.debugPrint("DEBUG| Loading screen applied: " + dest.toAbsolutePath());
     }
 
 
@@ -208,7 +208,7 @@ public class ImageProcessor {
         Path source = TORCHES_DIR.resolve(filename);  // fixed input path
 
         if (!Files.exists(source)) {
-            System.err.println("⚠️ Torch file not found: " + source.toAbsolutePath());
+            System.err.println("!|️ Torch file not found: " + source.toAbsolutePath());
             return;
         }
 
@@ -220,7 +220,7 @@ public class ImageProcessor {
 
         Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
 
-        System.out.println("✔ Torch applied: " + filename);
+        App.debugPrint("DEBUG| Torch applied: " + filename);
     }
 
 }

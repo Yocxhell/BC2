@@ -42,7 +42,7 @@ public class TorchProcessor {
         try {
             if (!Files.exists(indicatorOutputDir)) {
                 Files.createDirectories(indicatorOutputDir);
-                System.out.println("✔ Indicator output directory created at: " + indicatorOutputDir.toAbsolutePath());
+                System.out.println("!| Indicator output directory created at: " + indicatorOutputDir.toAbsolutePath());
             }
 
             String sourceName = torchType.equals("default")
@@ -53,13 +53,13 @@ public class TorchProcessor {
             Path dest = indicatorOutputDir.resolve("arena.screen.raid.darkest");
 
             if (!Files.exists(source)) {
-                System.err.println("⚠️ Round indicator file not found: " + source.toAbsolutePath());
+                System.err.println("!|️ Round indicator file not found: " + source.toAbsolutePath());
             } else {
                 Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("✔ Round indicator applied: " + dest.toAbsolutePath());
+                App.debugPrint("DEBUG| Round indicator applied: " + dest.toAbsolutePath());
             }
         } catch (IOException e) {
-            System.err.println("⚠️ Error applying round indicator: " + e.getMessage());
+            System.err.println("X|️ Error applying round indicator: " + e.getMessage());
         }
     }
 
@@ -67,7 +67,7 @@ public class TorchProcessor {
         try {
             if (!Files.exists(outputDir)) {
                 Files.createDirectories(outputDir);
-                System.out.println("✔ Torch output directory created at: " + outputDir.toAbsolutePath());
+                System.out.println("!| Torch output directory created at: " + outputDir.toAbsolutePath());
             }
 
             String baseName = map.getOrDefault(torchType, DEFAULT_TORCH);
@@ -77,16 +77,16 @@ public class TorchProcessor {
                 Path dest = outputDir.resolve(fixedOutputName + ext);     // fixed output filenames
 
                 if (!Files.exists(source)) {
-                    System.err.println("⚠️ Torch file not found: " + source.toAbsolutePath());
+                    System.err.println("!| Torch file not found: " + source.toAbsolutePath());
                     continue;
                 }
 
                 Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("✔ Torch applied: " + dest.toAbsolutePath());
+                App.debugPrint("DEBUG| Torch applied: " + dest.toAbsolutePath());
             }
 
         } catch (IOException e) {
-            System.err.println("⚠️ Error applying torch files: " + e.getMessage());
+            System.err.println("X|️ Error applying torch files: " + e.getMessage());
         }
     }
 }

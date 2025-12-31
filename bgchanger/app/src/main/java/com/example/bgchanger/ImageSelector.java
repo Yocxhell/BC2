@@ -10,6 +10,7 @@ public class ImageSelector {
     private static final String CONFIG_FILE = "config.txt";                        
     private static final String STATE_FILE = "used_backgrounds.txt";               
     private static final String BACKGROUND_CONFIG_FILE = "backgrounds.config.txt"; 
+    private static Path rootDir;
     private static Path bgDir;
     private static Path bgOutputDir;
     private static Path audioOutputDir;
@@ -36,7 +37,7 @@ public class ImageSelector {
         loadOrAskForRank();
         askOrChangeSelectionType();
 
-        System.out.println("✔ Current selection mode: " + selectionType.name());
+        System.out.println(" | Current selection mode: " + selectionType.name());
 
         outputFilename = RANK_FILENAMES_MAP.getOrDefault(userRank, "arena.entrance_room_wall_novice.png");
 
@@ -51,14 +52,14 @@ public class ImageSelector {
                 .collect(Collectors.toList());
 
         if (allBackgrounds.isEmpty()) {
-            System.out.println("\n⚠️ No backgrounds found");
+            System.out.println("\n!|️ No backgrounds found");
             return;
         }
 
         Set<String> usedBackgrounds = loadUsedImages();
 
         if (usedBackgrounds.containsAll(allBackgrounds)) {
-            System.out.println("\n✅ All backgrounds used, cycle reset\n");
+            System.out.println("\n | All backgrounds used, cycle reset\n");
             usedBackgrounds.clear();
             saveUsedImages(usedBackgrounds);
         }
@@ -81,15 +82,15 @@ public class ImageSelector {
         }
 
         if (available.isEmpty()) {
-            System.out.println("\n⚠️ No available backgrounds");
+            System.out.println("\n!|️ No available backgrounds");
             return;
         }
 
         String selectedImage = available.get(new Random().nextInt(available.size()));
-        System.out.println("\n✔ Background selected: " + selectedImage);
+        System.out.println("\n | Background selected: " + selectedImage);
 
         BackgroundConfig bgConfig = BackgroundConfig.readBackgroundConfig(Paths.get("background pool", BACKGROUND_CONFIG_FILE), selectedImage);
-        System.out.println("\n✔ Applied configuration:");
+        System.out.println("\n | Applied configuration:");
         if (selectionType == SelectionType.PROGRESSIVE || selectionType == SelectionType.EXCLUSIVE_PROGRESSIVE) {
             System.out.println("  - Progression: " + (bgConfig != null ? bgConfig.getProgression() : "N/A"));
         }
@@ -111,12 +112,6 @@ public class ImageSelector {
             TorchProcessor.applyTorch("default", torchOutputDir, indicatorOutputDir);
         }
 
-        if (!selectedImage.toLowerCase().endsWith(".png")) {
-            System.out.println("⚠️ Selected background is not a .png file. Selecting another one...");
-            run();
-            return;
-        }
-
         Path source = bgDir.resolve(selectedImage);
         Path dest = bgOutputDir.resolve(outputFilename);
         Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
@@ -124,10 +119,10 @@ public class ImageSelector {
         usedBackgrounds.add(selectedImage);
         saveUsedImages(usedBackgrounds);
 
-        System.out.println("✔ Background applied: " + dest.toAbsolutePath());
+        App.debugPrint("DEBUG| Background applied: " + dest.toAbsolutePath());
     }
 
-    private static void loadOrAskForPaths() {
+    protected static void loadOrAskForPaths() {
         if (pathsLoaded) return;
 
         CatchInput input = new CatchInput();
@@ -136,17 +131,14 @@ public class ImageSelector {
         boolean shouldReset = false;
 
         if (config.exists()) {
-            String reset = input.stringValue("⚙️ Do you want to change output paths? (y/n): ").trim().toLowerCase();
+            String reset = input.stringValue("?|️ Do you want to change output paths? (y/n): ").trim().toLowerCase();
             shouldReset = reset.equals("y") || reset.equals("yes");
         }
 
         if (!config.exists() || shouldReset) {
-            String bcPath = input.stringValue("\n📥 Insert path for darkest dungeon ('.../Steam/steamapps/common/DarkestDungeon'): ");
-            //String outPath = input.stringValue("\n📥 Insert output path for backgrounds ('.../dlc/1117860_arena_mp/dungeons/arena'): ");
-            //String audioOutPath = input.stringValue("\n📥 Insert output path for custom music ('.../dlc/1117860_arena_mp/audio/secondary_banks'): ");
-            //String loadingOutPath = input.stringValue("\n📥 Insert output path for loading screens ('.../dlc/1117860_arena_mp/loading_screen'): ");
-            //String torchOutPath = input.stringValue("\n📥 Insert output path for torches ('.../dlc/1117860_arena_mp/fx'): ");
+            String bcPath = input.stringValue("\n?| Insert path for darkest dungeon ('.../Steam/steamapps/common/DarkestDungeon'): ");
 
+            rootDir = Paths.get(bcPath);
             bgOutputDir = Paths.get(bcPath + "/dlc/1117860_arena_mp/dungeons/arena");
             audioOutputDir = Paths.get(bcPath + "/dlc/1117860_arena_mp/audio/secondary_banks");
             loadingOutputDir = Paths.get(bcPath + "/dlc/1117860_arena_mp/loading_screen");
@@ -154,6 +146,8 @@ public class ImageSelector {
             indicatorOutputDir = Paths.get(bcPath + "/dlc/1117860_arena_mp/scripts/layout");
 
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE))) {
+                writer.write("root_dir=" + rootDir.toAbsolutePath().toString());
+                writer.newLine();
                 writer.write("background_output_dir=" + bgOutputDir.toAbsolutePath().toString());
                 writer.newLine();
                 writer.write("audio_output_dir=" + audioOutputDir.toAbsolutePath().toString());
@@ -176,7 +170,9 @@ public class ImageSelector {
             try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    if (line.startsWith("background_output_dir=")) {
+                    if (line.startsWith("root_dir=")) {
+                        rootDir = Paths.get(line.split("=")[1].trim());
+                    } else if (line.startsWith("background_output_dir=")) {
                         bgOutputDir = Paths.get(line.split("=")[1].trim());
                     } else if (line.startsWith("audio_output_dir=")) {
                         audioOutputDir = Paths.get(line.split("=")[1].trim());
@@ -196,9 +192,9 @@ public class ImageSelector {
                         userRank = line.split("=")[1].trim();
                     }
                 }
-                System.out.println("\n✔ Paths loaded");
+                System.out.println("\n | Paths loaded");
             } catch (IOException e) {
-                System.err.println("\n⚠️ An error occurred while loading paths, please set new ones");
+                System.err.println("\n!|️ An error occurred while loading paths, please set new ones");
                 config.delete();
                 loadOrAskForPaths(); // Retry
             }
@@ -215,11 +211,11 @@ public class ImageSelector {
 
         if (!config.exists()) {
             // Ask once if no config
-            String userInput = input.stringValue("? Select your background selection type (random, progressive, exclusive_progressive): ").toLowerCase();
+            String userInput = input.stringValue("?| Select your background selection type (random, progressive): ").toLowerCase();
             try {
                 selectionType = SelectionType.valueOf(userInput.toUpperCase());
             } catch (IllegalArgumentException e) {
-                System.out.println("⚠️ Invalid selection type. Using default 'random'.");
+                System.out.println("!|️ Invalid selection type. Using default 'random'.");
                 selectionType = SelectionType.RANDOM;
             }
             saveConfigWithRank(userRank);
@@ -228,9 +224,9 @@ public class ImageSelector {
             return;
         }
 
-        String reset = input.stringValue("⚙️ Do you want to change selection type? (y/n): ").trim().toLowerCase();
+        String reset = input.stringValue("?|️ Do you want to change selection type (default:random)? (y/n): ").trim().toLowerCase();
         if (reset.equals("y") || reset.equals("yes")) {
-            String newSelectionTypeInput = input.stringValue("Select your background selection type (random, progressive): ").toLowerCase(); //exclusive_progressive not implemented yet
+            String newSelectionTypeInput = input.stringValue("?| Select your background selection type (random, progressive): ").toLowerCase(); //exclusive_progressive not implemented yet
             try {
                 SelectionType newSelectionType = SelectionType.valueOf(newSelectionTypeInput.toUpperCase());
                 if (newSelectionType != selectionType) {
@@ -239,19 +235,19 @@ public class ImageSelector {
                     File usedFile = new File(STATE_FILE);
                     if (usedFile.exists()) {
                         usedFile.delete();
-                        System.out.println("\n✅ Used backgrounds file reset due to selection type change.");
+                        System.out.println("\n | Used backgrounds file reset due to selection type change.");
                     }
 
                     saveConfigWithRank(userRank);
-                    System.out.println("✔ Selection type changed to: " + selectionType.name());
+                    System.out.println(" | Selection type changed to: " + selectionType.name());
                 } else {
-                    System.out.println("Selection type unchanged.");
+                    System.out.println(" | Selection type unchanged.");
                 }
             } catch (IllegalArgumentException e) {
-                System.out.println("⚠️ Invalid selection type. Keeping previous: " + selectionType.name());
+                System.out.println("!|️ Invalid selection type. Keeping previous: " + selectionType.name());
             }
         } else {
-            System.out.println("Selection type remains: " + selectionType.name());
+            System.out.println("!| Selection type remains: " + selectionType.name());
         }
 
         selectionTypeAsked = true;
@@ -265,19 +261,19 @@ public class ImageSelector {
         File config = new File(CONFIG_FILE);
 
         if (!config.exists()) {
-            userRank = input.stringValue("? Insert your rank (darkest, champion, veteran, apprentice, novice): ").toLowerCase();
+            userRank = input.stringValue("?| Insert your rank (darkest, champion, veteran, apprentice, novice): ").toLowerCase();
             saveConfigWithRank(userRank);
             ranksLoaded = true;
             return;
         }
 
         // Already loaded from config in loadOrAskForPaths(), so just confirm
-        String reset = input.stringValue("⚙️ Do you want to change your saved rank? (y/n): ").trim().toLowerCase();
+        String reset = input.stringValue("?|️ Do you want to change your saved rank (default: novice)? (y/n): ").trim().toLowerCase();
         if (reset.equals("y") || reset.equals("yes")) {
-            userRank = input.stringValue("? Insert your rank (darkest, champion, veteran, apprentice, novice): ").toLowerCase();
+            userRank = input.stringValue("?| Insert your rank (darkest, champion, veteran, apprentice, novice): ").toLowerCase();
             saveConfigWithRank(userRank);
         } else {
-            System.out.println("✔ Rank loaded: " + userRank);
+            System.out.println(" | Rank loaded: " + userRank);
         }
 
         ranksLoaded = true;
@@ -293,7 +289,7 @@ public class ImageSelector {
                     used.add(line.trim());
                 }
             } catch (IOException e) {
-                System.err.println("⚠️ Failed to read used images state file.");
+                System.err.println("!|️ Failed to read used images state file.");
             }
         }
         return used;
@@ -306,12 +302,14 @@ public class ImageSelector {
                 writer.newLine();
             }
         } catch (IOException e) {
-            System.err.println("⚠️ Failed to save used images state file.");
+            System.err.println("!|️ Failed to save used images state file.");
         }
     }
 
     private static void saveConfigWithRank(String rank) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE))) {
+            writer.write("root_dir=" + (rootDir != null ? rootDir.toAbsolutePath().toString() : ""));
+            writer.newLine();
             writer.write("background_output_dir=" + (bgOutputDir != null ? bgOutputDir.toAbsolutePath().toString() : ""));
             writer.newLine();
             writer.write("audio_output_dir=" + (audioOutputDir != null ? audioOutputDir.toAbsolutePath().toString() : ""));
@@ -327,7 +325,7 @@ public class ImageSelector {
             writer.write("rank=" + rank);
             writer.newLine();
         } catch (IOException e) {
-            System.err.println("⚠️ An error occurred while saving configuration.");
+            System.err.println("!|️ An error occurred while saving configuration.");
         }
     }
 
@@ -347,6 +345,7 @@ public class ImageSelector {
         return Collections.emptyList();
     }
 
+    //Placeholder method, never used
     private static List<String> getExclusiveProgressiveSelection(List<String> all, Set<String> used) {
         List<String> sorted = all.stream()
                 .sorted(Comparator.comparingInt(img -> {
@@ -381,4 +380,12 @@ public class ImageSelector {
         PROGRESSIVE,
         EXCLUSIVE_PROGRESSIVE
     }
+    
+    public static Path getRootDir() {
+        if (rootDir == null) {
+            throw new IllegalStateException("!| rootDir has not been initialized yet!");
+        }
+        return rootDir;
+    }
+
 }

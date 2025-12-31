@@ -69,14 +69,13 @@ public class BackgroundConfig {
                 // Check if the line starts with the selected image filename + " ="
                 if (line.startsWith(selectedImage + " =")) {
                     // Example line format:
-                    // crypts.entrance_room_wall.png = colorGrade = crypts, effect = none, music = ruins, progression = 0, loading = default, torch = default
-
+                    // background.png = colorGrade = crypts, effect = none, music = ruins, progression = 0, loading = default, torch = default
                     // Remove the filename and " = " part to get the rest
                     String configPart = line.substring((selectedImage + " = ").length()).trim();
 
                     String[] keyValues = configPart.split(",");
 
-                    // Default values (loading and torch obbligatori, quindi non null)
+                    // Default values
                     String colorGrade = "default";
                     String effect = "none";
                     String music = "default";
@@ -121,10 +120,10 @@ public class BackgroundConfig {
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error reading config file: " + e.getMessage());
+            System.err.println("X| Error reading config file: " + e.getMessage());
         }
 
-        System.err.println("Config for " + selectedImage + " not found.");
+        System.err.println("!| Config for " + selectedImage + " not found.");
         return null;
     }
 }

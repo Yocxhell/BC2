@@ -85,7 +85,7 @@ public class MusicProcessor {
             // Check if the output directory exists; if not, create it
             if (!Files.exists(outputDir)) {
                 Files.createDirectories(outputDir);
-                System.out.println("✔ Output directory created at: " + outputDir.toAbsolutePath());
+                System.out.println("!| Output directory created at: " + outputDir.toAbsolutePath());
             }
 
             // Define the bank file path based on musicName
@@ -93,7 +93,7 @@ public class MusicProcessor {
 
             // Check if the bank file exists
             if (!Files.exists(bankPath)) {
-                System.err.println("⚠️ Bank file not found at: " + bankPath.toAbsolutePath());
+                System.err.println("!|️ Bank file not found at: " + bankPath.toAbsolutePath());
                 return;
             }
 
@@ -103,10 +103,10 @@ public class MusicProcessor {
             // Copy the bank file to the output directory
             Files.copy(bankPath, dest, StandardCopyOption.REPLACE_EXISTING);
 
-            System.out.println("\n✔ Music applied: " + dest.toAbsolutePath());
+            App.debugPrint("\nDEBUG| Music applied: " + dest.toAbsolutePath());
 
         } catch (IOException e) {
-            System.err.println("⚠️ Error applying music bank: " + e.getMessage());
+            System.err.println("!|️ Error applying music bank: " + e.getMessage());
         }
     }
 }
