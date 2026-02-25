@@ -11,7 +11,7 @@ public class App {
         String userInput;
         int i = 0;
 
-        System.out.println("\n=== Background Changer v0.5.1 beta ===");
+        System.out.println("\n=== Background Changer v0.6.0 beta ===");
 
         do {
             i++;

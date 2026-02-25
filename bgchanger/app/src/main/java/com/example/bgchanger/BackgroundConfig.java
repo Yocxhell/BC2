@@ -69,7 +69,7 @@ public class BackgroundConfig {
                 // Check if the line starts with the selected image filename + " ="
                 if (line.startsWith(selectedImage + " =")) {
                     // Example line format:
-                    // background.png = colorGrade = crypts, effect = none, music = ruins, progression = 0, loading = default, torch = default
+                    // background.png = colorGrade = crypts, effect = default, music = ruins, progression = 0, loading = default, torch = default
                     // Remove the filename and " = " part to get the rest
                     String configPart = line.substring((selectedImage + " = ").length()).trim();
 
@@ -77,7 +77,7 @@ public class BackgroundConfig {
 
                     // Default values
                     String colorGrade = "default";
-                    String effect = "none";
+                    String effect = "default";
                     String music = "default";
                     int progression = 0;
                     String loading = "default";

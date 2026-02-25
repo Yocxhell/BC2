@@ -7,25 +7,29 @@ import java.util.Map;
 public class TorchProcessor {
 
     // Map torch type -> base filename for arena_torch
-    private static final Map<String, String> TORCH_MAP = Map.of(
-            "default", "arena_torch_default",
-            "generic", "arena_torch_generic",
-            "blood", "arena_torch_blood",
-            "comet", "arena_torch_comet",
-            "br-sun", "arena_torch_br-sun",
-            "br-moon", "arena_torch_br-moon",
-            "br-eclipse", "arena_torch_br-eclipse"
+    private static final Map<String, String> TORCH_MAP = Map.ofEntries(
+        Map.entry("default", "arena_torch_default"),
+        Map.entry("generic", "arena_torch_generic"),
+        Map.entry("blood", "arena_torch_blood"),
+        Map.entry("comet", "arena_torch_comet"),
+        Map.entry("comet_haunting", "arena_torch_comet_haunting"),
+        Map.entry("comet_blazing", "arena_torch_comet_blazing"),
+        Map.entry("comet_splendorous", "arena_torch_comet_splendorous"),
+        Map.entry("comet_gleaming", "arena_torch_comet_gleaming"),
+        Map.entry("br-sun", "arena_torch_br-sun"),
+        Map.entry("br-moon", "arena_torch_br-moon"),
+        Map.entry("br-eclipse", "arena_torch_br-eclipse")
     );
 
     // Map torch type -> base filename for arena_torch_burndown
     private static final Map<String, String> BURNDOWN_MAP = Map.of(
-            "default", "arena_torch_burndown_default",
-            "generic", "arena_torch_burndown_generic",
-            "blood", "arena_torch_burndown_blood",
-            "comet", "arena_torch_burndown_comet",
-            "br-sun", "arena_torch_burndown_br-sun",
-            "br-moon", "arena_torch_burndown_br-moon",
-            "br-eclipse", "arena_torch_burndown_br-eclipse"
+        "default", "arena_torch_burndown_default",
+        "generic", "arena_torch_burndown_generic",
+        "blood", "arena_torch_burndown_blood",
+        "comet", "arena_torch_burndown_comet",
+        "br-sun", "arena_torch_burndown_br-sun",
+        "br-moon", "arena_torch_burndown_br-moon",
+        "br-eclipse", "arena_torch_burndown_br-eclipse"
     );
 
     private static final String DEFAULT_TORCH = TORCH_MAP.get("default");
