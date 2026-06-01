@@ -21,16 +21,6 @@ public class TorchProcessor {
         Map.entry("br-eclipse", "arena_torch_br-eclipse")
     );
 
-    // Map torch type -> base filename for arena_torch_burndown
-    private static final Map<String, String> BURNDOWN_MAP = Map.of(
-        "default", "arena_torch_burndown_default",
-        "generic", "arena_torch_burndown_generic",
-        "blood", "arena_torch_burndown_blood",
-        "comet", "arena_torch_burndown_comet",
-        "br-sun", "arena_torch_burndown_br-sun",
-        "br-moon", "arena_torch_burndown_br-moon",
-        "br-eclipse", "arena_torch_burndown_br-eclipse"
-    );
 
     private static final String DEFAULT_TORCH = TORCH_MAP.get("default");
 
@@ -40,7 +30,6 @@ public class TorchProcessor {
     public static void applyTorch(String torchType, Path torchOutputDir, Path indicatorOutputDir) {
         // Copy regular torch files
         copyTorchFiles(torchOutputDir.resolve("arena_torch"), TORCH_MAP, torchType, "arena_torch");
-        copyTorchFiles(torchOutputDir.resolve("arena_torch_burndown"), BURNDOWN_MAP, torchType, "arena_torch_burndown");
 
         // Copy round indicator file
         try {
