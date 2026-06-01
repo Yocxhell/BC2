@@ -12,4 +12,4 @@ My drive also contains custom backgrounds outside of the ones used for progressi
 
 Its also possible to configure yourself which colorgrade/loading screen/torch/music to use to a certain background, check my guide to see which keyword to use in which section.
 
-My Drive: https://drive.google.com/drive/folders/1aC6rAC5DROwAGeVoLe9jHGgGCTzmgdfV?usp=sharing
+My Drive: https://drive.google.com/drive/folders/1aC6rAC5DROwAGeVoLe9jHGgGCTzmgdfV
