@@ -10,9 +10,6 @@ Its also possible to configure yourself which colorgrade/loading screen/torch/mu
 
 
 
-
-
-
 I upload music-less releases (light version) here in this github repository (due to upload size limit).
 My drive instead has the latest music release (full version) and additional custom backgrounds (usually from other games)
 
